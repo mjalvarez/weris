@@ -1,16 +1,16 @@
-module.exports = {
+export default {
   path: 'app',
   getChildRoutes(partialNextState, cb) {
     require.ensure([], (require) => {
       cb(null, [
-        require('./routes/charts'),
-        require('./routes/dashboard'),
-        require('./routes/ecommerce'),
-        require('./routes/forms'),
-        require('./routes/pageLayouts'),
-        require('./routes/pages'),
-        require('./routes/tables'),
-        require('./routes/ui'),
+        require('./routes/charts').default,
+        require('./routes/dashboard').default,
+        require('./routes/ecommerce').default,
+        require('./routes/forms').default,
+        require('./routes/pageLayouts').default,
+        require('./routes/pages').default,
+        require('./routes/tables').default,
+        require('./routes/ui').default,
       ]);
     });
   },

@@ -3,8 +3,8 @@ module.exports = {
   getChildRoutes(partialNextState, cb) {
     require.ensure([], (require) => {
       cb(null, [
-        require('./routes/centered'),
-        require('./routes/fullWidth'),
+        require('./routes/centered').default,
+        require('./routes/fullWidth').default,
       ]);
     });
   }

@@ -3,13 +3,13 @@ module.exports = {
   getChildRoutes(partialNextState, cb) {
     require.ensure([], (require) => {
       cb(null, [
-        require('./routes/about'),
-        require('./routes/blog'),
-        require('./routes/careers'),
-        require('./routes/contact'),
-        require('./routes/faqs'),
-        require('./routes/services'),
-        require('./routes/terms'),
+        require('./routes/about').default,
+        require('./routes/blog').default,
+        require('./routes/careers').default,
+        require('./routes/contact').default,
+        require('./routes/faqs').default,
+        require('./routes/services').default,
+        require('./routes/terms').default,
       ]);
     });
   }

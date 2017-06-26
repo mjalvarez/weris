@@ -1,8 +1,8 @@
-module.exports = {
+export default {
   path: 'products',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
-      cb(null, require('./components/Products'));
+      cb(null, require('./components/Products').default);
     });
   }
 };
