@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'icon-boxes',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

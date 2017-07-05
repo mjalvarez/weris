@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'form',
   getChildRoutes(partialNextState, cb) {
     require.ensure([], (require) => {

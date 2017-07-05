@@ -56,4 +56,4 @@ const Lists = () => (
   </div>
     );
 
-module.exports = Lists;
+export default Lists;

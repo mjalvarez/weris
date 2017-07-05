@@ -17,4 +17,4 @@ const Stepper = () => (
   </div>
 );
 
-module.exports = Stepper;
+export default Stepper;

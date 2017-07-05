@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'table',
   getChildRoutes(partialNextState, cb) {
     require.ensure([], (require) => {

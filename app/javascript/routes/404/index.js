@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: '404',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

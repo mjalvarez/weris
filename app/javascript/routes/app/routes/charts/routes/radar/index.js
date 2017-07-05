@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'radar',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

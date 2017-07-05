@@ -28,4 +28,4 @@ const APPCONFIG = {
   }
 };
 
-module.exports = APPCONFIG;
+export default APPCONFIG;

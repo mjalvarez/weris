@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'terms',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

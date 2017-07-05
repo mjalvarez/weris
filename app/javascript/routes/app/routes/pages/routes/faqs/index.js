@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'faqs',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

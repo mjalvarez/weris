@@ -9,24 +9,26 @@
     %link{:href => "favicon.ico", :rel => "icon", :type => "image/x-icon"}/
     / google fonts
     :javascript
-      WebFontConfig = {
-        google: { families: [ 'Roboto:100,300,400,400italic,500,700:latin' ] }
-      };
-      (function() {
-        var wf = document.createElement('script');
-        wf.src = 'vendors/webfontloader/webfontloader.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-      })();
-    %link{:href => "vendors/material-design-icons/iconfont/material-icons.css", :rel => "stylesheet"}/
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
+      // WebFontConfig = {
+      //   google: { families: [ 'Roboto:100,300,400,400italic,500,700:latin' ] }
+      // };
+      // (function() {
+      //   var wf = document.createElement('script');
+      //   wf.src = 'vendors/webfontloader/webfontloader.js';
+      //   wf.type = 'text/javascript';
+      //   wf.async = 'true';
+      //   var s = document.getElementsByTagName('script')[0];
+      //   s.parentNode.insertBefore(wf, s);
+      // })();
+    = stylesheet_link_tag 'material-icons', media: 'all'
+    = stylesheet_link_tag 'application', media: 'all'
+    = stylesheet_link_tag 'http://0.0.0.0:3000/packs/hello_react.css', media: 'all'
 
   %body#body
     %section#app-container
-      = yield
+
       #loader-container
     :javascript
       __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
-    = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
+    = yield
+    = javascript_include_tag 'application'

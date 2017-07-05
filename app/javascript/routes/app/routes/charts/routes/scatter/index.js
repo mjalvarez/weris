@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'Scatter',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'feature-callouts',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

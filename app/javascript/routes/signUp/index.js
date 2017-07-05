@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'sign-up',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'timeline',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {

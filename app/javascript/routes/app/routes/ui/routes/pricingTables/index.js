@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   path: 'pricing-tables',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
