@@ -2,31 +2,60 @@
 %html
   %head
     %meta{:charset => "utf-8"}/
-    %title React Admin
-    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
-    %meta{:content => "", :name => "description"}/
-    %meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport"}/
-    %link{:href => "favicon.ico", :rel => "icon", :type => "image/x-icon"}/
-    / google fonts
-    :javascript
-      // WebFontConfig = {
-      //   google: { families: [ 'Roboto:100,300,400,400italic,500,700:latin' ] }
-      // };
-      // (function() {
-      //   var wf = document.createElement('script');
-      //   wf.src = 'vendors/webfontloader/webfontloader.js';
-      //   wf.type = 'text/javascript';
-      //   wf.async = 'true';
-      //   var s = document.getElementsByTagName('script')[0];
-      //   s.parentNode.insertBefore(wf, s);
-      // })();
-    = stylesheet_link_tag 'material-icons', media: 'all'
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Cover - Free Bulma template
+    %link{:href => "../images/fav_icon.png", :rel => "shortcut icon", :type => "image/x-icon"}/
+    %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet"}/
+    / Bulma Version 0.7.1
     = stylesheet_link_tag 'application', media: 'all'
+    :css
+      html,
+      body {
+          font-family: 'Open Sans';
+          }
+      img {
+          padding: 5px;
+          border: 1px solid #ccc;
+          }
+  %body
+    %section.hero.is-fullheight.is-default.is-bold
+      -#.hero-head
+      -#  %nav.navbar
+      -#    .container
+      -#      .navbar-brand
+      -#        %a.navbar-item{:href => "../"}
+      -#          %img{:alt => "Logo", :src => "/assets/talon.png"}/
+      -#        %span.navbar-burger.burger{"data-target" => "navbarMenu"}
+      -#          %span
+      -#          %span
+      -#          %span
+      -#      #navbarMenu.navbar-menu
+      -#        .navbar-end
+      -#          .tabs.is-right
+      -#            %ul
+      -#              %li.is-active
+      -#                %a Home
+      -#              %li
+      -#                %a{:href => ""} Examples
+      -#              %li
+      -#                %a{:href => ""} Features
+      -#              %li
+      -#                %a{:href => ""} Team
+      -#              %li
+      -#                %a{:href => ""} Help
+      .hero-body
+        .container.has-text-centered
 
-  %body#body
-    %section#app-container
 
-    = yield
+          = yield
+
+
+      .hero-foot
+        .container
+          .tabs.is-centered
+            %ul
+              %li
+                %a And this is the bottom
     = javascript_include_tag 'application'
-
-

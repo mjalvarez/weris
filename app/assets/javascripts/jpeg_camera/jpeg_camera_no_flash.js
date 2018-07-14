@@ -8,9 +8,9 @@
 
   JpegCamera = (function() {
     JpegCamera.DefaultOptions = {
-      shutter_ogg_url: "/jpeg_camera/shutter.ogg",
-      shutter_mp3_url: "/jpeg_camera/shutter.mp3",
-      swf_url: "/jpeg_camera/jpeg_camera.swf",
+      shutter_ogg_url: "/assets/jpeg_camera/shutter.ogg",
+      shutter_mp3_url: "/assets/jpeg_camera/shutter.mp3",
+      swf_url: "/assets/jpeg_camera/jpeg_camera.swf",
       on_debug: function(message) {
         if (console && console.log) {
           return console.log("JpegCamera: " + message);
@@ -504,7 +504,7 @@
           this.video.style.position = "relative";
           this.video.style.width = "" + crop.width + "px";
           this.video.style.height = "" + crop.height + "px";
-          this.video.style.left = "" + crop.x_offset + "px";
+          // this.video.style.left = "" + crop.x_offset + "px";
           this.video.style.top = "" + crop.y_offset + "px";
           return this._prepared(this.video_width, this.video_height);
         } else if (this._status_checks_count > 100) {
