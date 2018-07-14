@@ -7,14 +7,14 @@ class SnapshotBuilder
   end
 
   def create_snapshot_record
-    public_url = upload_to_s3
-    Snapshot.create photo: file, public_url: public_url
-
+    url = upload_to_s3
+    ap url
+    url
   end
 
   def upload_to_s3
     key = "snap-#{Time.now.to_i}.jpg"
-    obj = @s3.bucket('remote-finder').object(key)
+    obj = @s3.bucket(ENV['AWS_BUCKET']).object(key)
     obj.upload_file(file.path, acl: 'public-read')
     obj.public_url
   end
