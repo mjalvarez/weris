@@ -1,7 +1,7 @@
 .columns.is-vcentered
   .column.is-12
     .tile.is-ancestor{ style: "flex-wrap: wrap;"}
-      - Snapshot.all.each do |snapshot|
+      - @snapshots.each do |snapshot|
         .tile.is-4.is-parent
           %figure.image
             = image_tag snapshot.s3_url, style: "align-self: center;"

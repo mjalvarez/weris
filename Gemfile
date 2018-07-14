@@ -43,6 +43,7 @@ gem 'hamlit'
 gem 'paperclip'
 gem 'aws-sdk', '~> 2'
 gem 'dynamoid', '~> 2'
+gem 'ralyxa'
 
 
 group :development, :test do

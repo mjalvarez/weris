@@ -11,6 +11,10 @@ class SnapshotsController < ApplicationController
 
   def weris
     @snapshots = Snapshot.all
+    respond_to do |format|
+      format.json { render json: @snapshots }
+      format.html
+    end
   end
 
   private
