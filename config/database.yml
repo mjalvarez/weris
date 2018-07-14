@@ -31,7 +31,8 @@ test:
 production:
   <<: *default
   database: weris_production
-  username: root
-  password: root
+  username: sazed
+  password: mistborn
   host: localhost
   encoding: utf8
+  port: 3306

@@ -3,19 +3,15 @@
   #placeholder
     %p Your browser does not support a camera!
 %br/
-%p
-  %button#start_recording Start Recording
-%br/
-%button#add_to_collection Save Snapshot
-%br/
+
+.buttons
+  %span.button.is-success#start_recording Start Recording
+  %span.button.is-info#add_to_collection Save Snapshot
+
+
 #upload_status
 #upload_result
+
 %br/
 %img#loading_img{:height => "100", :src => "/assets/images/loading.gif", :width => "100"}/
 %audio#audio_speech{:src => "#"}
-%br/
-%br/
--#%p
--#  %a{:href => "/collection/create"} Create Collection
--#  |
--#  %a{:href => "/collection/delete"} Delete Collection

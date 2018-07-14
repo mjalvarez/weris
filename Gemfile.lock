@@ -638,6 +638,8 @@ GEM
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
     builder (3.2.3)
+    bulma-rails (0.7.1)
+      sass (~> 3.2)
     byebug (9.0.6)
     capybara (2.14.3)
       addressable
@@ -785,6 +787,7 @@ DEPENDENCIES
   awesome_print
   aws-sdk (~> 3)
   bootstrap (~> 4.0.0.alpha6)
+  bulma-rails (~> 0.7.1)
   byebug
   capybara (~> 2.13)
   dotenv-rails
