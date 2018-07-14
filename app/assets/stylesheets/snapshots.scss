@@ -1,3 +1,29 @@
-// Place all the styles related to the SnapshotsController controller here.
+// Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  padding: 0.5em;
+  text-align: center;
+  font-family: "Helvetica Neueu", "Helvetica", "Arial", sans;
+}
+
+
+input {
+  width: 300px;
+}
+
+#camera {
+  display: inline-block;
+  background-color: #eee;
+  width: 600px;
+  height: 600px;
+  margin: 0.5em;
+}
+
+#camera .placeholder {
+  padding: 0.5em;
+}
+
+button {
+  margin: 0.5em;
+}

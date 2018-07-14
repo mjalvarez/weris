@@ -101,9 +101,11 @@ $(document).ready(function() {
 
         // Initiate the camera widget on screen
         var options = {
-            shutter_ogg_url: "js/jpeg_camera/shutter.ogg",
-            shutter_mp3_url: "js/jpeg_camera/shutter.mp3",
-            swf_url: "js/jpeg_camera/jpeg_camera.swf"
+            shutter_ogg_url: "/assets/jpeg_camera/shutter.ogg",
+            shutter_mp3_url: "/assets/jpeg_camera/shutter.mp3",
+            swf_url: "/assets/jpeg_camera/jpeg_camera.swf",
+            quality: 1.0,
+            mirror: true
         }
 
 

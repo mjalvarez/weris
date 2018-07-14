@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180714014512) do
 
-  create_table "snapshots", force: :cascade do |t|
+  create_table "snapshots", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "label"
     t.string "photo_file_name"
     t.string "photo_content_type"
