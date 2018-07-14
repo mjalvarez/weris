@@ -22,13 +22,9 @@
       // })();
     = stylesheet_link_tag 'material-icons', media: 'all'
     = stylesheet_link_tag 'application', media: 'all'
-    = stylesheet_link_tag 'http://0.0.0.0:3000/packs/hello_react.css', media: 'all'
 
   %body#body
     %section#app-container
 
-      #loader-container
-    :javascript
-      __REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__
     = yield
     = javascript_include_tag 'application'

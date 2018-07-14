@@ -1,1 +1,21 @@
-= javascript_pack_tag 'hello_react'
+%h1 The Talon Initiative
+#camera
+  #placeholder
+    %p Your browser does not support a camera!
+%br/
+%p
+  %button#start_recording Start Recording
+%br/
+%button#add_to_collection Add To Collection
+%br/
+#upload_status
+#upload_result
+%br/
+%img#loading_img{:height => "100", :src => "images/loading.gif", :width => "100"}/
+%audio#audio_speech{:src => "#"}
+%br/
+%br/
+%p
+  %a{:href => "/collection/create"} Create Collection
+  |
+  %a{:href => "/collection/delete"} Delete Collection
