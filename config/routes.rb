@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   resources :snapshots do
-
+    collection do
+      get :weris
+    end
   end
 
   root 'pages#index'

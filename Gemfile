@@ -41,7 +41,9 @@ gem 'jquery-rails'
 gem 'foreman'
 gem 'hamlit'
 gem 'paperclip'
-gem 'aws-sdk', '~> 3'
+gem 'aws-sdk', '~> 2'
+gem 'dynamoid', '~> 2'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -35,6 +35,9 @@ staging:
   host: <%= ENV.fetch("RDS_HOSTNAME") {} %>
   encoding: utf8
   port: <%= ENV.fetch("RDS_PORT") {} %>
+  dynamodb_access_key_id: <%= ENV['DYNAMODB_ACCESS_KEY_ID'] %>
+  dynamodb_secret_access_key: <%= ENV['DYNAMODB_SECRET_ACCESS_KEY'] %>
+  dynamodb_region: <%= ENV['DYNAMODB_REGION'] %>
 production:
   <<: *default
   database: weris_production

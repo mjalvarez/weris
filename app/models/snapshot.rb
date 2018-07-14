@@ -1,4 +1,7 @@
-class Snapshot < ApplicationRecord
-  has_attached_file :photo, styles: { thumb: "100x100>" }, default_url: "/images/:style/missing.png"
-  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
+class Snapshot
+  include Dynamoid::Document
+
+  table name: :snapshots, key: :id
+
+  field :s3_url, :string
 end

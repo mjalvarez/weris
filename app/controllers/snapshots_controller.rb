@@ -9,6 +9,10 @@ class SnapshotsController < ApplicationController
     head :ok
   end
 
+  def weris
+    @snapshots = Snapshot.all
+  end
+
   private
 
   def captured_image

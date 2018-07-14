@@ -19,32 +19,8 @@
           padding: 5px;
           border: 1px solid #ccc;
           }
-  %body
+  %body{ class: "#{controller_name}-#{action_name}"}
     %section.hero.is-fullheight.is-default.is-bold
-      -#.hero-head
-      -#  %nav.navbar
-      -#    .container
-      -#      .navbar-brand
-      -#        %a.navbar-item{:href => "../"}
-      -#          %img{:alt => "Logo", :src => "/assets/talon.png"}/
-      -#        %span.navbar-burger.burger{"data-target" => "navbarMenu"}
-      -#          %span
-      -#          %span
-      -#          %span
-      -#      #navbarMenu.navbar-menu
-      -#        .navbar-end
-      -#          .tabs.is-right
-      -#            %ul
-      -#              %li.is-active
-      -#                %a Home
-      -#              %li
-      -#                %a{:href => ""} Examples
-      -#              %li
-      -#                %a{:href => ""} Features
-      -#              %li
-      -#                %a{:href => ""} Team
-      -#              %li
-      -#                %a{:href => ""} Help
       .hero-body
         .container.has-text-centered
 

@@ -16,7 +16,7 @@
 
 
 $(document).ready(function() {
-    if (window.JpegCamera) {
+    if ($('body').hasClass('snapshots-index') && window.JpegCamera) {
 
         var camera; // placeholder
 

@@ -27,3 +27,16 @@ input {
 button {
   margin: 0.5em;
 }
+
+
+.text-bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+figure.image {
+  position: relative;
+  text-align: center;
+  color: white;
+}
