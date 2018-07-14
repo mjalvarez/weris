@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180714014512) do
+ActiveRecord::Schema.define(version: 20180714061332) do
 
   create_table "snapshots", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "label"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20180714014512) do
     t.datetime "photo_updated_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "public_url"
   end
 
 end

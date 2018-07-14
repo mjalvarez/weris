@@ -21,7 +21,7 @@ $(document).ready(function() {
         var camera; // placeholder
 
         // Add the photo taken to the current Rekognition collection for later comparison
-        var add_to_collection = function() {
+        var save_snapshot = function() {
             var snapshot = camera.capture();
             var api_url = "/snapshots";
             $("#loading_img").show();
@@ -81,23 +81,63 @@ $(document).ready(function() {
             return greet;
         }
 
-        var startRecording = function(){
-            var counter = 0;
-            var i = setInterval(function(){
-                add_to_collection()
+        var counter = 0;
+        var isRecording = false
 
-                counter++;
-                if(counter === 10) {
-                    clearInterval(i);
-                }
-            }, 5000);
+        var $btn = $("#start_recording")
+        var record = function(){
+
+            save_snapshot()
+            console.log('COUNTER: ', counter)
+            counter++;
+            if(counter === 10) {
+                clearInterval(recorder);
+                $btn
+                    .html("Start Recording")
+                    .removeClass('is-danger')
+                    .addClass('is-success')
+                isRecording = false
+                counter = 0
+            }
+
+        }
+        var recorder = setInterval(record, 5000);
+        var toggleRecording = function(){
+            if(isRecording) {
+                console.log('IS RECORDING? ', isRecording)
+                stopRecording()
+            } else {
+                startRecording()
+            }
 
         }
 
+        var startRecording = function(){
+            isRecording = true
+            $btn
+                .html("<i class=\"fa fa-circle-o-notch fa-spin\" style=\"font-size:24px\"></i>  Stop Recording")
+                .removeClass('is-success')
+                .addClass('is-danger')
+
+            record()
+
+        }
+
+        var stopRecording = function() {
+            isRecording = false
+            counter = 0
+            clearInterval(recorder);
+
+            $btn
+                .html("Start Recording")
+                .removeClass('is-danger')
+                .addClass('is-success')
+        }
+
         // Define what the button clicks do.
-        $("#add_to_collection").click(add_to_collection);
+        $("#save_snapshot").click(save_snapshot);
         $("#compare_image").click(compare_image);
-        $("#start_recording").click(startRecording);
+        $("#start_recording").click(toggleRecording);
 
         // Initiate the camera widget on screen
         var options = {

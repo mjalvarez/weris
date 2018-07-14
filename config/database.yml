@@ -29,12 +29,12 @@ test:
   encoding: utf8
 staging:
   <<: *default
-  database: <%= ENV.fetch("RDS_DB_NAME") %>
-  username: <%= ENV.fetch("RDS_USERNAME") %>
-  password: <%= ENV.fetch("RDS_PASSWORD") %>
-  host: <%= ENV.fetch("RDS_HOSTNAME") %>
+  database: <%= ENV.fetch("RDS_DB_NAME") {} %>
+  username: <%= ENV.fetch("RDS_USERNAME") {} %>
+  password: <%= ENV.fetch("RDS_PASSWORD") {} %>
+  host: <%= ENV.fetch("RDS_HOSTNAME") {} %>
   encoding: utf8
-  port: <%= ENV.fetch("RDS_PORT") %>
+  port: <%= ENV.fetch("RDS_PORT") {} %>
 production:
   <<: *default
   database: weris_production

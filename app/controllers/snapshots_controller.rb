@@ -4,7 +4,17 @@ class SnapshotsController < ApplicationController
   end
 
   def create
-    Snapshot.create photo: request.body, label: Time.now.to_i
+    builder = SnapshotBuilder.new(captured_image)
+    builder.create_snapshot_record
     head :ok
+  end
+
+  private
+
+  def captured_image
+    file = Tempfile.new(['temp','.jpg'])
+    file.binmode
+    file.write request.body.read
+    file
   end
 end
